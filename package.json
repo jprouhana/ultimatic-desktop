@@ -39,6 +39,12 @@
         { "target": "portable", "arch": ["x64"] }
       ]
     },
+    "nsis": {
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    },
     "linux": {
       "target": ["AppImage"],
       "category": "Game"
