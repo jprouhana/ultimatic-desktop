@@ -6,6 +6,19 @@ no network, no accounts. Just you and a friend on one screen.
 Built with Electron and vanilla JS (no framework, no build step for the
 renderer).
 
+## Download
+
+Grab the latest build from the [**Releases**](https://github.com/jprouhana/ultimatic-desktop/releases/latest) page:
+
+| OS | File |
+|----|------|
+| **Windows** | `Ultimatic-Setup-1.0.0.exe` (installer) — or `Ultimatic-1.0.0-portable.exe` (no install, just run) |
+| **macOS** | `Ultimatic-1.0.0.dmg` |
+| **Linux** | `Ultimatic-1.0.0.AppImage` (`chmod +x`, then run) |
+
+> Builds are **unsigned**, so the OS will warn on first launch.
+> **Windows:** *More info → Run anyway.* **macOS:** right-click the app → *Open*.
+
 ## Modes
 
 | Mode | Board | The twist |
