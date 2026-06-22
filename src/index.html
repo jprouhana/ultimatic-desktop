@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimatic</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="topbar">
+      <div class="brand"><span class="logo">▦</span>ULTIMATIC</div>
+      <div class="spacer"></div>
+      <button class="ghost" id="soundBtn" title="Toggle sound">🔊 Sound</button>
+      <button class="ghost" id="menuBtn" title="Back to menu (Esc)" hidden>↩ Menu</button>
+    </div>
+
+    <!-- ── Mode select ─────────────────────────────────────────────── -->
+    <section id="menu" class="screen">
+      <div class="menuHead">
+        <h1>Pick a game</h1>
+        <p class="sub">Two players, one screen. No computer opponent — just you and a friend.</p>
+      </div>
+      <div id="modeGrid"></div>
+    </section>
+
+    <!-- ── Game ────────────────────────────────────────────────────── -->
+    <section id="game" class="screen" hidden>
+      <div id="scorebar">
+        <div class="player pA" id="pA">
+          <span class="mark">✕</span>
+          <span class="pname" id="nameA" contenteditable="true" spellcheck="false">Player 1</span>
+          <span class="score" id="scoreA">0</span>
+        </div>
+        <div class="midinfo">
+          <div class="modeTag" id="modeTag">Classic</div>
+          <div class="draws">draws <b id="scoreD">0</b></div>
+        </div>
+        <div class="player pB" id="pB">
+          <span class="score" id="scoreB">0</span>
+          <span class="pname" id="nameB" contenteditable="true" spellcheck="false">Player 2</span>
+          <span class="mark">◯</span>
+        </div>
+      </div>
+
+      <div id="turnbar">
+        <div id="turnText">Player 1's turn</div>
+        <div id="wildPick" hidden>
+          <span class="pickLabel">place</span>
+          <button class="pickBtn active" data-sym="X">✕</button>
+          <button class="pickBtn" data-sym="O">◯</button>
+        </div>
+      </div>
+
+      <div id="boardWrap">
+        <div id="board"></div>
+        <div id="banner" hidden>
+          <div class="bannerCard">
+            <div id="bannerText">Player 1 wins!</div>
+            <button class="primary" id="againBtn">Play again</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="controls">
+        <button class="ghost" id="undoBtn" title="Undo (U)">↶ Undo</button>
+        <button class="ghost" id="newBtn" title="New round (R)">↻ New round</button>
+        <button class="ghost" id="rulesBtn">? Rules</button>
+        <button class="ghost danger" id="resetBtn" title="Reset match score">⌫ Reset score</button>
+      </div>
+    </section>
+
+    <!-- ── Rules modal ─────────────────────────────────────────────── -->
+    <div id="rulesModal" class="modal" hidden>
+      <div class="modalCard">
+        <h2 id="rulesTitle">Rules</h2>
+        <ul id="rulesList"></ul>
+        <button class="primary" id="rulesClose">Got it</button>
+      </div>
+    </div>
+
+    <div id="confetti"></div>
+
+    <script src="sound.js"></script>
+    <script src="games.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
