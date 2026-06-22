@@ -16,8 +16,18 @@ Grab the latest build from the [**Releases**](https://github.com/jprouhana/ultim
 | **macOS** | `Ultimatic-1.0.0-arm64.dmg` (Apple Silicon) — or `Ultimatic-1.0.0.dmg` (Intel) |
 | **Linux** | `Ultimatic-1.0.0.AppImage` (`chmod +x`, then run) |
 
-> Builds are **unsigned**, so the OS will warn on first launch.
-> **Windows:** *More info → Run anyway.* **macOS:** right-click the app → *Open*.
+> Builds are **unsigned** (no paid Apple/Microsoft cert), so the OS warns on first launch.
+>
+> **Windows:** click *More info → Run anyway*.
+>
+> **macOS:** drag Ultimatic to Applications, then run this once in Terminal to clear the
+> download-quarantine flag (otherwise Gatekeeper may say the app *"is damaged"*):
+>
+> ```sh
+> xattr -dr com.apple.quarantine /Applications/Ultimatic.app
+> ```
+>
+> After that, open it normally. (Or right-click the app → *Open* on the first launch.)
 
 ## Modes
 

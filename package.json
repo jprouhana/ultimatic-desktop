@@ -26,6 +26,7 @@
       "src/**/*",
       "!**/*.map"
     ],
+    "afterPack": "scripts/adhoc-sign.js",
     "mac": {
       "category": "public.app-category.board-games",
       "target": [
